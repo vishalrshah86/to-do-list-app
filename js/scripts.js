@@ -8,23 +8,26 @@ function newItem(){
   li.append(inputValue);
 
   if (inputValue === '') {
-    alert("You must write something!");
+    alert("Please fill with text");
   } else {
     $('#list').append(li);
   }
 
 
-
   //2. Crossing out an item from the list of items:
 
   function crossOut() {
-    li.toggleClass("strike");
+    li.toggleClass('strike');
   }
 
   li.on("dblclick", function crossOut() {
     li.toggleClass("strike");
   });
 
+  // To add close Button
+
+  let button = $('<crossOutButton>X</crossOutButton>');
+  li.append(button);
 
 
   //3(i). Adding the delete button "X":
@@ -46,4 +49,3 @@ function newItem(){
   // 4. Reordering the items:
 
   $('#list').sortable();
-  */
