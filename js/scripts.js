@@ -24,11 +24,6 @@ function newItem(){
     li.toggleClass("strike");
   });
 
-  // To add close Button
-
-  let button = $('<crossOutButton>X</crossOutButton>');
-  li.append(button);
-
 
   //3(i). Adding the delete button "X":
 
@@ -49,3 +44,4 @@ function newItem(){
   // 4. Reordering the items:
 
   $('#list').sortable();
+}
